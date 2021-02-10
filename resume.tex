@@ -1,0 +1,158 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% Website: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{}{\Large Guillermo Casal}} & Email : \href{mailto:guillermoxcasal@live.com}{guillermoxcasal@live.com}\\
+ \href{https://github.com/gcasa032} github.com/gcasa032 & Mobile : +1-305-632-0994 \\
+\end{tabular*}
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Florida International University (BabyFeed Web Application)}{Miami, FL}
+      {Full Stack Developer}{Aug. 2020 - Dec. 2020}
+      \resumeItemListStart
+         \resumeItem{Scrum Methodology}
+         {Worked collaboratively with a team of five developers and the product owner in a series of 2 week sprints. Utilized Scrum Agile Methodology for project management and organization (Daily Scrum Meetings as well as Sprint Planning, Retrospective and Backlog Grooming Meetings) }
+        \resumeItem{Research Portal}
+          {Designed and developed the Research and Participant portals. These new additions to the application which allows researchers from an institution to create participant accounts in bulk. Additionally researchers can analyze and evaluate the participant's Frequent Food Questionnaire Data.}
+          \resumeItem{Data Export}
+          {Developed a data export feature utilized by Researchers and Clinicians to extract all their user data into a multi-sheet spreadsheet}
+           \resumeItem{BabyFeed}
+          {BabyFeed is a web application that allows clinicians, parents and researchers to record and evaluate an infant's nutrient intake.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {SparkDev}{Miami, FL}
+      {Android Developer}{Aug. 2019 - Dec. 2019}
+      \resumeItemListStart
+         \resumeItem{Front-End Development}
+          {Implemented several dynamic UI elements as well as features utilizing the Google Maps API and Firebase }
+          \resumeItem{RideFIU}
+         	{Worked alongside a team of 10 students to develop RideFIU a ridesharing system built as a native Android mobile application}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Publix}{Miami, FL}
+      {Grocery Clerk}{Nov. 2016 - Present}
+      \resumeItemListStart
+      \resumeItem{Customer Service}
+          {Utilized my knowledge of product and inventory to assist customers with any inquiry and provide premier customer service}
+        \resumeItem{Inventory Functions}
+          {Performed a number of inventory functions, organized stock, replenished stock levels, broke down and set up displays on the sales floor.}
+\resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{VincentVictoreroSC Web Application}
+      {A web application for a strength and conditioning coach, built to advertise as well as organize his business. Includes features allowing prospective clients to fill out a form which can then be reviewed by an administrator. The administrator can also add and update static information on the site. Built using MongoDB, Express, React.js and Node.js}
+    \resumeSubItem{Global View}
+      {A web application which features live video feeds from open web cameras around the world. Built using Python, Flask and OpenCV }
+%     \resumeSubItem{Mac Setup}
+%       {Book that gives step by step instructions on setting up developer environment on Mac OS.}
+  \resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+\section{Skills}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{Programming Languages}{: Python, JavaScript, Java, C, SQL, HTML, CSS}
+     \item
+     \textbf{Technologies}{: React, Git, Express, Flask, Bootsrap}
+     \item
+     \textbf{Languages}{: English(Full), Spanish(Native)}
+   }
+ \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Florida International University}{Miami, FL}
+      {Bachelor of Science in Computer Science}
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
