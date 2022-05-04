@@ -1,7 +1,6 @@
 %-------------------------
 % Resume in Latex
-% Author : Sourabh Bajaj
-% Website: https://github.com/sb2nov/resume
+% Author : Sidratul Muntaha Ahmed
 % License : MIT
 %------------------------
 
@@ -14,8 +13,23 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[pdftex]{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
 
 
 \pagestyle{fancy}
@@ -25,8 +39,8 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.375in}
-\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-.5in}
 \addtolength{\textheight}{1.0in}
@@ -42,117 +56,124 @@
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
 %-------------------------
 % Custom commands
-\newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
+\newcommand{\resumeItem}[1]{
+  \item\large{
+    {#1 \vspace{-2pt}}
   }
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\large#1} & \textit{\large #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
 
-\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{document}
 
-%----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{}{\Large Guillermo Casal}} & Email : \href{mailto:guillermoxcasal@live.com}{guillermoxcasal@live.com}\\
- \href{https://github.com/gcasa032} github.com/gcasa032 & Mobile : +1-305-632-0994 \\
-\end{tabular*}
+%----------HEADING----------
 
 
-%-----------EXPERIENCE-----------------
+\begin{center}
+    \textbf{\Huge \scshape Guillermo Casal} \\ \vspace{1pt}
+    \vspace{3pt}\small 305-632-0994 $|$ \href{mailto:guillermoxcasal@live.com}{\underline{guillermoxcasal@live.com}}$|$ 
+    \href{https://www.linkedin.com/in/guillermo-casal-492b521b3/}{\underline{linkedin.com/in/guillermo-casal-492b521b3/}}
+\end{center}
+
+
+%-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Florida International University (BabyFeed Web Application)}{Miami, FL}
-      {Full Stack Developer}{Aug. 2020 - Dec. 2020}
+      {Software Engineer}{March 2021 – Present}
+      {Tata Consultancy Services}{Miami, FL - Remote}
       \resumeItemListStart
-         \resumeItem{Scrum Methodology}
-         {Worked collaboratively with a team of five developers and the product owner in a series of 2 week sprints. Utilized Scrum Agile Methodology for project management and organization (Daily Scrum Meetings as well as Sprint Planning, Retrospective and Backlog Grooming Meetings) }
-        \resumeItem{Research Portal}
-          {Designed and developed the Research and Participant portals. These new additions to the application allows researchers from an institution to create participant accounts in bulk. Additionally researchers can analyze and evaluate the participant's Frequent Food Questionnaire Data.}
-          \resumeItem{Data Export}
-          {Developed a data export feature utilized by Researchers and Clinicians to extract all their user data into a multi-sheet spreadsheet}
-           \resumeItem{BabyFeed}
-          {BabyFeed is a web application that allows clinicians, parents and researchers to record and evaluate an infant's nutrient intake.}
+        \resumeItem{Optimized a vendor data extraction process producing a 30\% decrease in execution time through filtering out obsolete jobs based on client needs.}
+        \resumeItem{Provided support for critical ETL production systems on an on-call rotation basis}
+        \resumeItem{Collaborated with business analysts to translate their reporting needs into SQL queries, creating relevant reports and dissecting ongoing issues.}
+        \resumeItem{Developed and tested processes directed toward optimizing ETL data pipeline orchestration (Apache Airflow, Python, S3)}
+        \resumeItem{Maintained and optimized critical data processing jobs (Scala, Apache Spark, EMR)}
       \resumeItemListEnd
-
-    \resumeSubheading
-      {SparkDev}{Miami, FL}
-      {Android Developer}{Aug. 2019 - Dec. 2019}
-      \resumeItemListStart
-         \resumeItem{Front-End Development}
-          {Implemented several dynamic UI elements as well as features utilizing the Google Maps API and Firebase }
-          \resumeItem{RideFIU}
-         	{Worked alongside a team of 10 students to develop RideFIU a ridesharing system built as a native Android mobile application}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Publix}{Miami, FL}
-      {Grocery Clerk}{Nov. 2016 - Present}
-      \resumeItemListStart
-      \resumeItem{Customer Service}
-          {Utilized my knowledge of product and inventory to assist customers with any inquiry and provide premier customer service}
-        \resumeItem{Inventory Functions}
-          {Performed a number of inventory functions, organized stock, replenished stock levels, broke down and set up displays on the sales floor.}
-\resumeItemListEnd
-
-  \resumeSubHeadingListEnd
-
-
-%-----------PROJECTS-----------------
+     
+    \resumeSubHeadingListEnd
+    
+%-----------PROJECTS-----------
 \section{Projects}
-  \resumeSubHeadingListStart
-    \resumeSubItem{VincentVictoreroSC Web Application}
-      {A web application for a strength and conditioning coach, built to advertise as well as organize his business. Includes features allowing prospective clients to fill out a form which can then be reviewed by an administrator. The administrator can also add and update static information on the site. Built using MongoDB, Express, React.js and Node.js}
-    \resumeSubItem{Global View}
-      {A web application which features live video feeds from open web cameras around the world. Built using Python, Flask and OpenCV }
-%     \resumeSubItem{Mac Setup}
-%       {Book that gives step by step instructions on setting up developer environment on Mac OS.}
-  \resumeSubHeadingListEnd
+
+    \resumeSubHeadingListStart
+    
+    \resumeProjectHeading
+          {\textbf{COVID-19 Data Analysis} $|$ \emph{Scala, Apache Spark}}{July 2021 -- August 2021}
+          \resumeItemListStart
+            \resumeItem{The objective of the project was to transform raw data to create a reportable dataset for COVID-19 deaths and confirmed cases at county, state and country levels, followed by generating reports at weekly, monthly and quarterly aggregations levels.}
+          \resumeItemListEnd
+    
+      \resumeProjectHeading
+          {\textbf{BabyFeed Web Application} $|$ \emph{Node, Angular, MongoDB, Java, Git}}
+          {August 2020 -- December 2020}
+          \resumeItemListStart
+            \resumeItem{BabyFeed is an application built to record and evaluate an infants nutrition intake. Nutrition intake data is input through a food frequency questionnaire, which is processed and made available to clinicians and researchers for analysis.}
+            \resumeItem{My team of 5 developers collaborated with a nutrition professor in a series of 2 week sprints utilizing Scrum Agile Methodology for project management and organization.}
+            \resumeItem{Designed and developed the Research component of the application. Which included mass participant account creation for data intake, researcher dashboard displaying participant data and data extraction.}
+          \resumeItemListEnd
+         
+
+    \resumeSubHeadingListEnd
+
 
 %
-%--------PROGRAMMING SKILLS------------
-\section{Skills}
- \resumeSubHeadingListStart
-   \item{
-     \textbf{Programming Languages}{: Python, JavaScript, Java, C, SQL, HTML, CSS}
-     \item
-     \textbf{Technologies}{: React, Angular, Node, Git, Express, Flask, Bootsrap}
-     \item
-     \textbf{Languages}{: English(Full), Spanish(Native)}
-   }
- \resumeSubHeadingListEnd
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \large{\item{
+     \textbf{Languages}{: Scala, Java, Python, SQL, JavaScript} \\
+     \textbf{Frameworks and Libraries}{: Apache Spark, Apache Airflow, React, Angular, Express, Node.js} \\
+     \textbf{Technologies}{: Unix, Git, AWS} \\
+    }}
+ \end{itemize}
 
-%-----------EDUCATION-----------------
+%-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
       {Florida International University}{Miami, FL}
-      {Bachelor of Science in Computer Science}
-  \resumeSubHeadingListEnd
+      {Bachelor of Science in Computer Science}{December 2020}
 
+  \resumeSubHeadingListEnd
 
 %-------------------------------------------
 \end{document}
